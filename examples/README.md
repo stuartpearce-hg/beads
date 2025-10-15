@@ -4,19 +4,41 @@ This directory contains examples of how to integrate bd with AI agents and workf
 
 ## Examples
 
+### Agent Examples
+
 - **[python-agent/](python-agent/)** - Simple Python agent that discovers ready work and completes tasks
+- **[claude-code-agent/](claude-code-agent/)** - Python agent that uses Claude Code API to analyze and work on tasks
+- **[devin-agent/](devin-agent/)** - Python agent that uses Devin API for autonomous task execution
 - **[bash-agent/](bash-agent/)** - Bash script showing the full agent workflow
-- **[markdown-to-jsonl/](markdown-to-jsonl/)** - Convert markdown planning docs to bd issues
-- **[git-hooks/](git-hooks/)** - Pre-configured git hooks for automatic export/import
-- **[branch-merge/](branch-merge/)** - Branch merge workflow with collision resolution
+
+### Integration Examples
+
 - **[claude-desktop-mcp/](claude-desktop-mcp/)** - MCP server for Claude Desktop integration
+- **[git-hooks/](git-hooks/)** - Pre-configured git hooks for automatic export/import
+
+### Workflow Examples
+
+- **[markdown-to-jsonl/](markdown-to-jsonl/)** - Convert markdown planning docs to bd issues
+- **[branch-merge/](branch-merge/)** - Branch merge workflow with collision resolution
 
 ## Quick Start
 
 ```bash
-# Try the Python agent example
+# Try the simple Python agent example
 cd python-agent
 python agent.py
+
+# Try the Claude Code agent (requires ANTHROPIC_API_KEY)
+cd claude-code-agent
+export ANTHROPIC_API_KEY='your-key-here'
+pip install -r requirements.txt
+./agent.py
+
+# Try the Devin agent (requires DEVIN_API_KEY)
+cd devin-agent
+export DEVIN_API_KEY='your-key-here'
+pip install -r requirements.txt
+./agent.py
 
 # Try the bash agent example
 cd bash-agent
