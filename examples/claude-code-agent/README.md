@@ -27,10 +27,10 @@ Set your Anthropic API key as an environment variable:
 export ANTHROPIC_API_KEY='your-api-key-here'
 ```
 
-Optionally, configure the Claude model to use (defaults to claude-3-5-sonnet-20241022):
+Optionally, configure the Claude model to use (defaults to claude-sonnet-4-20250514):
 
 ```bash
-export CLAUDE_MODEL='claude-3-5-sonnet-20241022'
+export CLAUDE_MODEL='claude-sonnet-4-20250514'
 ```
 
 ## Installation
@@ -66,7 +66,7 @@ chmod +x agent.py
 ```
 🚀 Claude Code Agent starting...
 
-📡 Using model: claude-3-5-sonnet-20241022
+📡 Using model: claude-sonnet-4-20250514
 
 ============================================================
 Iteration 1/10
@@ -128,7 +128,7 @@ print(result["discovered_issues"])
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
 | `ANTHROPIC_API_KEY` | Yes | - | Your Anthropic API key |
-| `CLAUDE_MODEL` | No | `claude-3-5-sonnet-20241022` | Claude model to use |
+| `CLAUDE_MODEL` | No | `claude-sonnet-4-20250514` | Claude model to use |
 
 ## Troubleshooting
 

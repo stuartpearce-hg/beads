@@ -33,7 +33,7 @@ class ClaudeCodeAgent:
             )
         
         self.client = anthropic.Anthropic(api_key=api_key)
-        self.model = os.environ.get("CLAUDE_MODEL", "claude-3-5-sonnet-20241022")
+        self.model = os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-20250514")
         self.current_task = None
 
     def run_bd(self, *args) -> dict:
