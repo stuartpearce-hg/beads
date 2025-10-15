@@ -199,7 +199,7 @@ Please analyze this task, implement a solution, and report:
             return {
                 "session_id": session_id,
                 "status": "created",
-                "url": session_data.get("session_url")
+                "url": session_data.get("url")
             }
             
         except requests.exceptions.RequestException as e:
@@ -234,13 +234,13 @@ Please analyze this task, implement a solution, and report:
                 response.raise_for_status()
                 
                 session_data = response.json()
-                status = session_data.get("status")
+                status_enum = session_data.get("status_enum")
                 
-                if status in ["completed", "failed", "cancelled"]:
-                    print(f"✓ Devin session {status}")
+                if status_enum in ["finished", "expired"]:
+                    print(f"✓ Devin session {status_enum}")
                     return {
-                        "status": status,
-                        "result": session_data.get("result", {}),
+                        "status": status_enum,
+                        "result": session_data,
                         "session_data": session_data
                     }
                 
@@ -310,7 +310,7 @@ Please analyze this task, implement a solution, and report:
         
         result = self.poll_session_status(session["session_id"])
         
-        if result["status"] == "completed":
+        if result["status"] == "finished":
             print(f"✓ Devin completed the work successfully")
             
             discovered_issues = self.extract_discovered_issues(result)
