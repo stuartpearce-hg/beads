@@ -1,0 +1,2 @@
+# Python dependencies for Claude Code Agent
+anthropic>=0.39.0

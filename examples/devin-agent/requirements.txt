@@ -1,0 +1,2 @@
+# Python dependencies for Devin Agent
+requests>=2.31.0
