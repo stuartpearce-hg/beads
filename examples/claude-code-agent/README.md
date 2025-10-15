@@ -21,6 +21,8 @@ A Python agent that uses the Anthropic Claude API to analyze and work on beads i
 
 ## Configuration
 
+### Using Environment Variables
+
 Set your Anthropic API key as an environment variable:
 
 ```bash
@@ -32,6 +34,17 @@ Optionally, configure the Claude model to use (defaults to claude-sonnet-4-20250
 ```bash
 export CLAUDE_MODEL='claude-sonnet-4-20250514'
 ```
+
+### Using .env File (Recommended)
+
+For easier configuration, copy the example environment file and update it with your credentials:
+
+```bash
+cp .env.example .env
+# Edit .env with your API key
+```
+
+The `.env` file is gitignored by default to prevent accidentally committing secrets.
 
 ## Installation
 

@@ -18,7 +18,16 @@ import subprocess
 import sys
 import time
 from typing import Optional, Dict, Any
+from pathlib import Path
 import requests
+
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).parent / '.env'
+    if env_path.exists():
+        load_dotenv(env_path)
+except ImportError:
+    pass
 
 
 class DevinAgent:

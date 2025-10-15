@@ -17,7 +17,16 @@ import os
 import subprocess
 import sys
 from typing import Optional, Dict, Any
+from pathlib import Path
 import anthropic
+
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).parent / '.env'
+    if env_path.exists():
+        load_dotenv(env_path)
+except ImportError:
+    pass
 
 
 class ClaudeCodeAgent:

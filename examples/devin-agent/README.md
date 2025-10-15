@@ -22,6 +22,8 @@ A Python agent that uses the Devin API to autonomously work on beads issues.
 
 ## Configuration
 
+### Using Environment Variables
+
 Set your Devin API key as an environment variable:
 
 ```bash
@@ -33,6 +35,17 @@ Optionally, configure the Devin API URL (defaults to https://api.devin.ai/v1):
 ```bash
 export DEVIN_API_URL='https://api.devin.ai/v1'
 ```
+
+### Using .env File (Recommended)
+
+For easier configuration, copy the example environment file and update it with your credentials:
+
+```bash
+cp .env.example .env
+# Edit .env with your API key
+```
+
+The `.env` file is gitignored by default to prevent accidentally committing secrets.
 
 ## Installation
 
